@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import MenuItem from "./MenuItem/MenuItem";
-import css from "./mainMenu.module.css";
+import { Menu } from "./MainMenu.styled";
 
 const MainMenu = ({ items }) => {
   return (
-    <ul className={css.list}>
+    <Menu>
       {items.map(({ id, text, link }) => (
         <MenuItem key={id} text={text} link={link} />
       ))}
-    </ul>
+    </Menu>
   );
 };
 

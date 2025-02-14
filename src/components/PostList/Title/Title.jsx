@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import css from "./title.module.css";
+import { PostTitle } from "./Title.styled";
 
 const Title = ({ text }) => {
-  return <h2 className={css.title}>{text}</h2>;
+  return <PostTitle>{text}</PostTitle>;
 };
 
 Title.propTypes = {

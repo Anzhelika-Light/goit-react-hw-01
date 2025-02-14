@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import css from "./post.module.css";
+import { PostItem, PostName, PostText } from "./Post.styled";
 
 const Post = ({ title, body }) => {
   return (
-    <li className={css.post}>
-      <h4 className={css.title}>{title}</h4>
-      <p className={css.text}>{body}</p>
-    </li>
+    <PostItem>
+      <PostName>{title}</PostName>
+      <PostText>{body}</PostText>
+    </PostItem>
   );
 };
 

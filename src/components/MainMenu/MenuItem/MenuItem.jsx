@@ -1,13 +1,11 @@
 import PropTypes from "prop-types";
-import css from "./menuItem.module.css";
+import { Item, Link } from "./MenuItem.styled";
 
 const MenuItem = ({ text, link }) => {
   return (
-    <li className={css.item}>
-      <a className={css.link} href={link}>
-        {text}
-      </a>
-    </li>
+    <Item>
+      <Link href={link}>{text}</Link>
+    </Item>
   );
 };
 
