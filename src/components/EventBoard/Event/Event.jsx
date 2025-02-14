@@ -3,34 +3,34 @@ import PropTypes from "prop-types";
 // import { formatEventStart } from "../../utils/formatEventStart";
 // import { formatEventDuration } from "../../utils/formatEventDuration";
 // Заміняємо 2 верхні рядки на 1 за допомогою реекспорту
-import { formatEventDuration, formatEventStart } from "../../utils";
-import { iconSize } from "../../constants";
-import styles from "./event.module.css";
+import { formatEventDuration, formatEventStart } from "../../../utils";
+import { iconSize } from "../../../constants";
+import { Card, EventName, Info, Chip } from "./Event.styled";
 
 const Event = ({ name, location, speaker, type, start, end }) => {
   const formattedStartTime = formatEventStart(start);
   const duration = formatEventDuration(start, end);
   return (
-    <div className={styles.event}>
-      <h2 className={styles.title}>{name}</h2>
-      <p className={styles.info}>
-        <FaMapMarkerAlt className={styles.icon} size={iconSize.sm} />
+    <Card>
+      <EventName>{name}</EventName>
+      <Info>
+        <FaMapMarkerAlt size={iconSize.sm} />
         {location}
-      </p>
-      <p className={styles.info}>
-        <FaUserAlt className={styles.icon} size={iconSize.sm} />
+      </Info>
+      <Info>
+        <FaUserAlt size={iconSize.sm} />
         {speaker}
-      </p>
-      <p className={styles.info}>
-        <FaCalendar className={styles.icon} size={iconSize.sm} />
+      </Info>
+      <Info>
+        <FaCalendar size={iconSize.sm} />
         {formattedStartTime}
-      </p>
-      <p className={styles.info}>
-        <FaClock className={styles.icon} size={iconSize.sm} />
+      </Info>
+      <Info>
+        <FaClock size={iconSize.sm} />
         {duration}
-      </p>
-      <span className={`${styles.chip} ${styles[type]}`}>{type}</span>
-    </div>
+      </Info>
+      <Chip eventType={type}>{type}</Chip>
+    </Card>
   );
 };
 

@@ -2,7 +2,7 @@ import "./App.css";
 import Profile from "./components/Profile/Profile";
 import FriendList from "./components/FriendList/FriendList";
 import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
-import PageTitle from "./components/PageTitle/PageTitle";
+import PageTitle from "./components/EventBoard/PageTitle/PageTitle";
 import EventBoard from "./components/EventBoard/EventBoard";
 import PostList from "./components/PostList/PostList";
 import MainMenu from "./components/MainMenu/MainMenu";
@@ -25,10 +25,10 @@ function App() {
       /> */}
       {/* <FriendList friends={friends} /> */}
       {/* <TransactionHistory items={transactions} /> */}
-      {/* <PageTitle text="24th Core Worlds Coalition Conference" />
-      <EventBoard events={upcomingEvents} /> */}
+      <PageTitle text="24th Core Worlds Coalition Conference" />
+      <EventBoard events={upcomingEvents} />
       {/* <PostList posts={posts} /> */}
-      <MainMenu items={menu} />
+      {/* <MainMenu items={menu} /> */}
     </>
   );
 }
