@@ -24,11 +24,11 @@ function App() {
         stats={userData.stats}
       /> */}
       {/* <FriendList friends={friends} /> */}
-      <TransactionHistory items={transactions} />
+      {/* <TransactionHistory items={transactions} /> */}
       {/* <PageTitle text="24th Core Worlds Coalition Conference" />
       <EventBoard events={upcomingEvents} /> */}
       {/* <PostList posts={posts} /> */}
-      {/* <MainMenu items={menu} /> */}
+      <MainMenu items={menu} />
     </>
   );
 }
